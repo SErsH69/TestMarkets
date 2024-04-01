@@ -1,0 +1,6 @@
+@use "sass:math";
+
+@function vw($target) {
+    $vw-result: math.div($target * 100, 1440) * 1vw;
+    @return $vw-result;
+}

@@ -1,0 +1,144 @@
+.header {
+    padding-top: vw(20);
+    padding-bottom: vw(20);
+    @media all and (max-width: 1023px) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    &__in {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__logo {
+        flex: 0 0 vw(85);
+        margin-right: vw(10);
+        @media all and (max-width: 1023px) {
+            flex: none;
+            max-width: 85px;
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+    &__menu {
+        width: 100%;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            li {
+                &:not(:first-child) {
+                    margin-left: vw(45);
+                }
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    font-weight: 400;
+                    font-size: vw(15);
+                    line-height: 160%;
+                    color: #111827;
+                    background: linear-gradient(#fb7101, #fb7101);
+                    background-position: 0% 100%;
+                    background-repeat: no-repeat;
+                    padding: vw(2) 0;
+                    background-size: 0% 2px;
+                    transition: background-size .3s;
+                    &:hover {
+                      background-size: 100% 2px;
+                    }
+                }
+            }
+        }
+    }
+    &__burger {
+        &--icon {
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' viewBox='0 0 24 25' fill='none'%3E%3Cpath d='M21 12.5H3M21 6.5H3M21 18.5H9' stroke='%23212121' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% / 100% no-repeat;
+        }
+        &--top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            border-bottom: 1px solid var(--Light-gray-2, #fff);
+            background: var(--white);
+            box-shadow: 0px 4px 52px 0px rgba(34, 43, 76, 0.08);
+        }
+        &--close {
+            width: 32px;
+            height: 32px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' viewBox='0 0 24 25' fill='none'%3E%3Crect x='5.41418' y='4.50003' width='20' height='2' rx='1' transform='rotate(45 5.41418 4.50003)' fill='%23212121'/%3E%3Crect x='4' y='18.6422' width='20' height='2' rx='1' transform='rotate(-45 4 18.6422)' fill='%23212121'/%3E%3C/svg%3E") 50% / 100% no-repeat;
+            cursor: pointer;
+        }
+        &--logo {
+            max-width: 102px;
+            width: 100%;
+            display: block;
+            text-decoration: none;
+            margin-right: auto;
+        }
+        &--body {
+            overflow: auto;
+            width: 100%;
+            position: fixed;
+            z-index: 10;
+            right: -100%;
+            top: 0;
+            height: 100%;
+            max-height: 100%;
+            border-radius: 0px 0px 16px 16px;
+            background: var(--white, #FFF);
+        }
+        &.isOpened {
+            &:before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.60);
+                z-index: 9;
+            }
+            .header__burger--body {
+                right: 0;
+            }
+        }
+        &--item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &--menu {
+            > ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                > li {
+                    > a {
+                        color: var(--Black, #313132);
+                        font-family: 'Gilroy', sans-serif, cursive;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
+                        text-decoration: none;
+                        display: block;
+                        padding: 8px 16px;
+                        border-bottom: 1px solid var(--Light-gray-2, #E0E0E0);
+                    }
+                }
+            }
+        }
+    }
+}

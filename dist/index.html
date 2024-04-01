@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/style.css?_v=20240401115211">
+</head>
+<body>
+    <div class="wrapper" id="app" :class="{isMobile, isTablet}">
+        <div v-if="!isMounted" class="preloader">
+    <div class="spinner"></div>
+</div>
+        <section class="main_top">
+    <div class="main_top__in center_block">
+        <div class="main_top__title">Успейте принять участие в конкурсе</div>
+        <div class="main_top__subtitle">до конца конкурса осталось</div>
+        <div class="main_top__timer">
+            <div class="main_top__timer--block">
+                <div class="main_top__timer--number" id="days">00</div>
+                <div class="main_top__timer--text" id="days-text">Дней</div>
+            </div>
+            <div class="main_top__timer--block">
+                <div class="main_top__timer--number" id="hours">00</div>
+                <div class="main_top__timer--text" id="hours-text">Часов</div>
+            </div>
+            <div class="main_top__timer--block">
+                <div class="main_top__timer--number" id="minutes">00</div>
+                <div class="main_top__timer--text" id="minutes-text">Минут</div>
+            </div>
+        </div>
+        <div class="main_top__close"></div>
+    </div>
+</section>
+        <header class="header">
+    <div class="header__in center_block">
+        <a href="/" class="header__logo">
+            <img src="./img/svg/logo.svg" alt="">
+        </a>
+        <nav class="header__menu" v-if="sizes.window >= 1023">
+            <ul>
+                <li><a href="#about">О конкурсе</a></li>
+                <li><a href="#investments">Инвестиции</a></li>
+            </ul>
+        </nav>
+        <div class="header__burger" :class="{'isOpened': header.isMobileMenuOpened}" v-if="sizes.window <= 1023">
+            <div class="header__burger--icon" @click.prevent="header.toogleMobileMenu.apply(header)"></div>
+            <div class="header__burger--body">
+                <div class="header__burger--top">
+                    <a href="/" class="header__burger--logo">
+                        <img src="./img/svg/logo.svg" alt="">
+                    </a>
+                    <div class="header__search_mob">
+                        <div class="header__search_mob--btn"></div>
+                    </div>
+                    <div class="header__burger--close" @click.prevent="header.toogleMobileMenu.apply(header)"></div>
+                </div>
+                <div class="header__burger--item">
+                    <nav class="header__burger--menu" @click="header.toogleMobileMenu.apply(header)">
+                        <ul>
+                            <li><a href="#about">О конкурсе</a></li>
+                            <li><a href="#investments">Инвестиции</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <main class="content">
+            <section id="about" class="main_first">
+    <div class="main_first__in center_block">
+        <div class="main_first__l-side">
+            <div class="main_first__subtitle">Партнерский Марафон — Зимний Сезон</div>
+            <div class="main_first__title">Конкурс <br>для партнеров</div>
+            <div class="main_first__text">Станьте самым активным партнером в ноябре 2021 – январе 2022. И выиграйте крутые призы от AMarkets!</div>
+            <a href="#" class="main_first__link">Принять участие</a>
+        </div>
+        <div class="main_first__r-side">
+            <picture><source srcset="./img/img_first.webp" type="image/webp"><img src="./img/img_first.png" alt=""></picture>
+        </div>
+    </div>
+</section>
+            <section id="investments" class="main_slider">
+    <div class="main_slider__in center_block">
+        <div class="main_slider__title">Инвестируйте в акции <br>популярных компаний</div>
+        <div class="main_slider__text">Зарабатывайте на росте и падении, а так же получайте
+            <br>до 8.3% годовых в валюте в виде дивидентов</div>
+        <div class="main_slider__slider js_slide">
+            <div class="main_slider__item">
+                <div class="main_slider__block" style="background: linear-gradient(90deg, #313131 0%, #444 100%);">
+                    <div class="main_slider__top">
+                        <div class="main_slider__txt">Tesla<span>TSLA.US</span></div>
+                        <div class="main_slider__icon">
+                            <img src="./img/svg/s1.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="main_slider__percent">Last year<span>+913%</span></div>
+                </div>
+            </div>
+            <div class="main_slider__item">
+                <div class="main_slider__block" style="background: linear-gradient(90deg, #77b900 0%, #70ae00 100%);">
+                    <div class="main_slider__top">
+                        <div class="main_slider__txt">Nvidia<span>NVDA.US</span></div>
+                        <div class="main_slider__icon">
+                            <img src="./img/svg/s2.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="main_slider__percent">Last year<span>+141  %</span></div>
+                </div>
+            </div>
+            <div class="main_slider__item">
+                <div class="main_slider__block" style="background: linear-gradient(90deg, #009a66 0%, #07c887 100%);">
+                    <div class="main_slider__top">
+                        <div class="main_slider__txt">AMD<span>AMD.US</span></div>
+                        <div class="main_slider__icon">
+                            <img src="./img/svg/s3.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="main_slider__percent">Last year<span>+95%</span></div>
+                </div>
+            </div>
+            <div class="main_slider__item">
+                <div class="main_slider__block" style="background: linear-gradient(90deg, #bbb 0%, #e7e7e7 100%);">
+                    <div class="main_slider__top">
+                        <div class="main_slider__txt">Apple<span>APP.US</span></div>
+                        <div class="main_slider__icon">
+                            <img src="./img/svg/s4.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="main_slider__percent">Last year<span>+83  %</span></div>
+                </div>
+            </div>
+            <div class="main_slider__item">
+                <div class="main_slider__block" style="background: linear-gradient(90deg, #f90 0%, #ffb23f 100%);">
+                    <div class="main_slider__top">
+                        <div class="main_slider__txt">Amazon<span>AMZN.US</span></div>
+                        <div class="main_slider__icon">
+                            <img src="./img/svg/s5.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="main_slider__percent">Last year<span>+77%</span></div>
+                </div>
+            </div>
+            <div class="main_slider__item">
+                <div class="main_slider__block" style="background: linear-gradient(90deg, #e53238 0%, #f94f54 100%);">
+                    <div class="main_slider__top">
+                        <div class="main_slider__txt">eBay inc.<span>EBAY.US</span></div>
+                        <div class="main_slider__icon">
+                            <img src="./img/svg/s6.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="main_slider__percent">Last year<span>+75%</span></div>
+                </div>
+            </div>
+            <div class="main_slider__item">
+                <div class="main_slider__block" style="background: linear-gradient(90deg, #34a853 0%, #fabc05 100%);">
+                    <div class="main_slider__top">
+                        <div class="main_slider__txt">Google<span>GOOG.US</span></div>
+                        <div class="main_slider__icon">
+                            <img src="./img/svg/s7.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="main_slider__percent">Last year<span>+35.80%</span></div>
+                </div>
+            </div>
+            <div class="main_slider__item">
+                <div class="main_slider__block" style="background: linear-gradient(90deg, #032368 0%, #01143d 100%);">
+                    <div class="main_slider__top">
+                        <div class="main_slider__txt">Microsoft<span>MSFT.US</span></div>
+                        <div class="main_slider__icon">
+                            <img src="./img/svg/s8.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="main_slider__percent">Last year<span>+528  %</span></div>
+                </div>
+            </div>
+        </div>
+        <button class="main_slider__btn" data-modal-id="1">Регистрация</button>
+    </div>
+</section>
+        </main>
+        <footer class="footer"></footer>
+        <div class="modal" data-modal="1">
+    <div class="modal__in">
+        <div class="modal__closer"></div>
+        <div class="modal__title">Регистрация</div>
+        <form action="/login" method="POST" class="modal__form">
+            <div class="modal__form--input">
+                <label for="text1">Имя*</label>
+                <input type="text" id="text1" name="fio" placeholder="Иван" required>
+            </div>
+            <div class="modal__form--input">
+                <label for="text2">Фамилия*</label>
+                <input type="text" id="text" name="fio" placeholder="Иванов" required>
+            </div>
+            <div class="modal__form--input">
+                <label for="email">E-mail*</label>
+                <input type="email" id="email" name="email" placeholder="unname@example.com" required>
+            </div>
+            <label class="modal__form--custom-checkbox">
+                <input type="checkbox" name="checkbox1" value="checked">
+                <span><span>Я прочел и принимаю условия <a href="#">Клиентского соглашения</a>, <a href="#">Политики конфиденциальности</a> и <a href="#">Политики возврата</a> денежных средств</span></span>
+            </label>
+            <div class="modal__form--submit">
+                <input type="submit" value="Отправить">
+            </div>
+        </form>
+    </div>
+</div>
+    </div>
+    <script src="js/app.min.js?_v=20240401115211"></script>
+</body>
+</html>

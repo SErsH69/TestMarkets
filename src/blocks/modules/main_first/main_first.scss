@@ -1,0 +1,93 @@
+.main_first {
+    padding-top: vw(68);
+    padding-bottom: vw(107);
+    @media all and (max-width: 1023px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &__in {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        @media all and (max-width: 1023px) {
+            flex-direction: column;
+        }
+    }
+    &__l-side {
+        width: 100%;
+        margin-right: vw(130);
+        @media all and (max-width: 1023px) {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+    &__subtitle {
+        margin-bottom: vw(8);
+        font-weight: 700;
+        font-size: vw(12);
+        line-height: 200%;
+        text-transform: uppercase;
+        color: #fb7101;
+        @media all and (max-width: 1023px) {
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+    }
+    &__title {
+        margin-bottom: vw(32);
+        font-weight: 700;
+        font-size: vw(64);
+        line-height: 100%;
+        color: #111827;
+        @media all and (max-width: 1023px) {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+    }
+    &__text {
+        margin-bottom: vw(27);
+        font-weight: 400;
+        font-size: vw(18);
+        line-height: 178%;
+        color: #111827;
+        @media all and (max-width: 1023px) {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    }
+    &__link {
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: vw(20);
+        line-height: 100%;
+        text-align: center;
+        color: #fff;
+        padding: vw(24);
+        background: #fb7101;
+        border: 1px solid #fb7101;
+        border-radius: vw(1000);
+        max-width: vw(325);
+        width: 100%;
+        &:hover {
+            background: #fff;
+            color: #fb7101;
+        }
+        @media all and (max-width: 1023px) {
+            max-width: 325px;
+            padding: 20px;
+            font-size: 18px;
+        }
+    }
+    &__r-side {
+        flex: 0 0 vw(460);
+        font-size: 0;
+        @media all and (max-width: 1023px) {
+            flex: none;
+            max-width: 420px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

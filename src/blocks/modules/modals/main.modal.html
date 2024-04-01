@@ -1,0 +1,27 @@
+<div class="modal" data-modal="1">
+    <div class="modal__in">
+        <div class="modal__closer"></div>
+        <div class="modal__title">Регистрация</div>
+        <form action="/login" method="POST" class="modal__form">
+            <div class="modal__form--input">
+                <label for="text1">Имя*</label>
+                <input type="text" id="text1" name="fio" placeholder="Иван" required>
+            </div>
+            <div class="modal__form--input">
+                <label for="text2">Фамилия*</label>
+                <input type="text" id="text" name="fio" placeholder="Иванов" required>
+            </div>
+            <div class="modal__form--input">
+                <label for="email">E-mail*</label>
+                <input type="email" id="email" name="email" placeholder="unname@example.com" required>
+            </div>
+            <label class="modal__form--custom-checkbox">
+                <input type="checkbox" name="checkbox1" value="checked">
+                <span><span>Я прочел и принимаю условия <a href="#">Клиентского соглашения</a>, <a href="#">Политики конфиденциальности</a> и <a href="#">Политики возврата</a> денежных средств</span></span>
+            </label>
+            <div class="modal__form--submit">
+                <input type="submit" value="Отправить">
+            </div>
+        </form>
+    </div>
+</div>
