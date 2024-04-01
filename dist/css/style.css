@@ -483,8 +483,8 @@ template {
 @font-face {
   font-family: "HelveticaNeueCyr";
   font-display: swap;
-  src: url("../fonts/HelveticaNeueCyr-Light.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Light.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Light.ttf") format("ttf");
-  font-weight: 300;
+  src: url("../fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Bold.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Bold.ttf") format("ttf");
+  font-weight: 700;
 }
 
 @font-face {
@@ -497,8 +497,8 @@ template {
 @font-face {
   font-family: "HelveticaNeueCyr";
   font-display: swap;
-  src: url("../fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Bold.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Bold.ttf") format("ttf");
-  font-weight: 700;
+  src: url("../fonts/HelveticaNeueCyr-Light.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Light.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Light.ttf") format("ttf");
+  font-weight: 300;
 }
 
 @font-face {
